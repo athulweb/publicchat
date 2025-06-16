@@ -1,0 +1,23 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rootzero Public Chat</title>
+  <style>
+    body { font-family: sans-serif; background: #111; color: #fff; padding: 2em; }
+    #messages { max-height: 300px; overflow-y: auto; border: 1px solid #444; padding: 1em; margin-bottom: 1em; }
+    input, button { padding: 0.5em; font-size: 1em; }
+    input { width: 70%; }
+  </style>
+</head>
+<body>
+  <h1>🔥 Rootzero Public Chat 🔥</h1>
+  <div id="messages"></div>
+  <input id="msg" placeholder="Type your message..." />
+  <button onclick="send()">Send</button>
+
+  <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
