@@ -3,19 +3,34 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Rootzero Public Chat</title>
+  <title>Public chat X</title>
   <style>
-    body { font-family: sans-serif; background: #111; color: #fff; padding: 2em; }
-    #messages { max-height: 300px; overflow-y: auto; border: 1px solid #444; padding: 1em; margin-bottom: 1em; }
-    input, button { padding: 0.5em; font-size: 1em; }
-    input { width: 70%; }
+    body { font-family: 'Segoe UI', sans-serif; background: #0f172a; color: #f8fafc; margin: 0; padding: 2em; }
+    h1 { text-align: center; color: #38bdf8; margin-bottom: 1em; }
+    .chat-box { max-width: 700px; margin: 0 auto; background: #1e293b; padding: 1em; border-radius: 12px; box-shadow: 0 0 10px #00000050; }
+    #messages { max-height: 400px; overflow-y: auto; margin-bottom: 1em; padding-right: 1em; }
+    .msg { margin-bottom: 1em; }
+    .msg strong { color: #facc15; }
+    .msg small { color: #94a3b8; font-size: 0.75em; }
+    input, button { padding: 0.7em; font-size: 1em; border: none; border-radius: 8px; }
+    input[type="text"] { width: calc(100% - 90px); margin-bottom: 0.5em; }
+    #username { width: 100%; margin-bottom: 1em; background: #334155; color: white; }
+    #msg { background: #334155; color: white; }
+    button { background: #22d3ee; color: black; cursor: pointer; }
+    button:hover { background: #06b6d4; }
+    .flex { display: flex; gap: 10px; }
   </style>
 </head>
 <body>
-  <h1>🔥 Rootzero Public Chat 🔥</h1>
-  <div id="messages"></div>
-  <input id="msg" placeholder="Type your message..." />
-  <button onclick="send()">Send</button>
+  <h1>🌐 Chatroom </h1>
+  <div class="chat-box">
+    <input id="username" placeholder="Your nickname..." />
+    <div id="messages"></div>
+    <div class="flex">
+      <input id="msg" type="text" placeholder="Say something..." />
+      <button onclick="send()">Send</button>
+    </div>
+  </div>
 
   <script src="https://cdn.jsdelivr.net/npm/gun/gun.js"></script>
   <script src="script.js"></script>
